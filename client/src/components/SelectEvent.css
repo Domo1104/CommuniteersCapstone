@@ -1,0 +1,13 @@
+.btn-join {
+    background: #7777;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+}
+
+.join-event-card {
+    margin-left: 35%;
+}
