@@ -71,15 +71,31 @@ function EventTask({category, selectedTask, setSelectedTask}) {
             <select className='tasks' value={selectedTask} onChange={(e) => setSelectedTask(e.target.value)}>
             <option> Select your role...</option>
             <option value="Field research">Field research</option>
-            <option value="Endangered species conservation">Endangered species conservation</option>
-            <option value="Conservation training">Conservation training</option>
-            <option value="Wildlife educator">Wildlife educator</option>
-            <option value="Outreach specialist">Outreach specialist</option>
+            <option value="Endangered Species Conservation">Endangered species conservation</option>
+            <option value="Conservation Training">Conservation training</option>
+            <option value="Wildlife Educator">Wildlife educator</option>
+            <option value="Outreach Specialist">Outreach specialist</option>
             <option value="Wildlife Law Enforcement Officer">Wildlife Law Enforcement Officer</option>
             <option value="Wildlife Inspector and Forensics Specialist">Wildlife Inspector and Forensics Specialist</option>
             <option value="Food Donations">Food Donations</option>
-            <option value="Supply donations">Supply donations</option>
-            <option value="Medical donations">Medical donations</option>
+            <option value="Supply Donations">Supply donations</option>
+            <option value="Medical Donations">Medical donations</option>
+            <option value="Any role">Fill any role needed</option>
+        </select>
+    )} else if (category === "zoo conservation") {
+        return (
+            <select className='tasks' value={selectedTask} onChange={(e) => setSelectedTask(e.target.value)}>
+            <option> Select your role...</option>
+            <option value="Research">Research</option>
+            <option value="Assisting Wildlife Education Officers">Assisting wildlife education officers</option>
+            <option value="Enclosure Cleaning">Enclosure cleaning</option>
+            <option value="Park Cleaning">Park cleaning</option>
+            <option value="Cashier">Cashier</option>
+            <option value="Feeder">Feeder</option>
+            <option value="Tour Guide">Tour guide</option>
+            <option value="Food Donations">Food Donations</option>
+            <option value="Supply Donations">Supply donations</option>
+            <option value="Medical Donations">Medical donations</option>
             <option value="Any role">Fill any role needed</option>
         </select>
     )}

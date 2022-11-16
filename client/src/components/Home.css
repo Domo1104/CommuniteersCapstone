@@ -20,7 +20,7 @@ div#logos {
     align-items: center;
     text-decoration: none;
     font-size: 2em;
-    /* backdrop-filter: blur(4px); */
+    backdrop-filter: blur(4px);
     margin-top: .5%;
   }
 
@@ -70,6 +70,7 @@ div#logos {
   width: 240px;
   padding: 0 6px;
   background: #7777;
+  border-radius: 1rem;
 }
 
 .search-bar:hover > .search-btn {
@@ -101,7 +102,6 @@ div#logos {
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
-
 }
 
 .search-bar:hover > .searchInput {

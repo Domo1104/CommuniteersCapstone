@@ -17,7 +17,7 @@ const history = useHistory()
         />
         <button className="search-btn" onClick={() => history.push("/events")}> 🔍 </button>
       </form>
-      <img className="background-img" src="https://i.pinimg.com/originals/7b/5b/f1/7b5bf10350f46ccdd950ff3dfb59cb6e.jpg" ></img>
+      <img className="background-img" src="https://pbs.twimg.com/media/Ev3lIedXEAIO0nc?format=jpg&name=medium" ></img>
       <div id="logos">
         <a href="https://www.Facebook.com"></a>
           <img alt="Facebook" src="https://cdn-icons-png.flaticon.com/512/2111/2111392.png"></img>

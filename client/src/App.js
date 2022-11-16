@@ -71,7 +71,10 @@ function App() {
           <Route path="/volunteer">
             <Volunteers />
           </Route>
-          <Route path="/infos">
+          <Route path="/info">
+            <Info />
+          </Route>
+          <Route path="/aboutus">
             <Info />
           </Route>
           <Route path="/login">
