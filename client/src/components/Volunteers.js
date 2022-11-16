@@ -44,7 +44,7 @@ function Volunteers() {
 
   return (
     <div>
-      <h1 className="header"> Past and present events </h1>
+      <h1 className="header"> Welcome, {volunteerLogIn.first_name} {volunteerLogIn.last_name}, here are your past and present events </h1>
       <div className="all-volunteer-events">
         {volunteerSignupEvents.map((mappedEvents) => {
           console.log(mappedEvents);

@@ -1,24 +1,36 @@
-.row {
+.signup-container {
     margin: 1%;
     background: white;
     padding: 1rem;
     border: 1px solid #777;
     border-radius: .50rem;
     display: flex;
-    position: static;
+    /* position: absolute; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 500px;
-    width: 285px;
+    height: 300px;
+    width: 250px;
     text-align: center;
     overflow: hidden;
+    margin-left: 40%;
 }
 
-.row:hover {
+.signup-container:hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
     cursor: pointer;
 }
 
+.email-input {
+    width: 170px;
+}
+
+.quote {
+    font-size: 2em;
+    -webkit-text-stroke: 1px rgb(26, 95, 26); /* width and color */
+    font-family: sans; color: rgb(136, 255, 0);
+    text-align: center;
+    margin-top: 15%;
+}

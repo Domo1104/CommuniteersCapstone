@@ -6,9 +6,9 @@ import Info from "./components/Infos";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import NavBar from './components/NavBar'
-import Search from "./components/Search";
 import SelectEvent from "./components/SelectEvent";
 import Volunteers from "./components/Volunteers"
+import AboutUs from"./components/AboutUs"
 
 export const eventContext = createContext()
 
@@ -63,19 +63,19 @@ function App() {
          <Home searchEvents={searchEvents} handleSearch={handleSearch} search={search}/>
           </Route>
           <Route path="/events/:title">
-            <SelectEvent eventListing={eventListing}/>
+          {!volunteerLogIn ? <Redirect to="/login"/> : <SelectEvent />}
           </Route>
           <Route path="/events">
             <EventListing eventListing={searchEvents} handleSearch={handleSearch} search={search}/>
           </Route>
           <Route path="/volunteer">
-            <Volunteers />
+          {!volunteerLogIn ? <Redirect to="/login"/> : <Volunteers />}
           </Route>
           <Route path="/info">
             <Info />
           </Route>
-          <Route path="/aboutus">
-            <Info />
+          <Route path="/about">
+            <AboutUs />
           </Route>
           <Route path="/login">
             {volunteerLogIn !== null? <Redirect to="/"/> : <LogIn setVolunteerLogIn = {setVolunteerLogIn} />}

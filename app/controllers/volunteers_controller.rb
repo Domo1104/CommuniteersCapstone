@@ -1,5 +1,5 @@
 class VolunteersController < ApplicationController
-    skip_before_action :authorized, only: [:index, :create, :show]
+    skip_before_action :authorized, only: [:index, :create]
 
     #GET /volunteers
     def index
