@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         session[:user_id] = volunteer.id
         render json: volunteer, status: :created
       else
-        return render json: { error: "Wrong email or password" }
+        return render json: { error: "Wrong email or password" }, status: 401
       end
     end
   

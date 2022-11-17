@@ -6,8 +6,7 @@ import EventTask from "./EventTask";
 import "./SelectEvent.css";
 
 export default function SelectEvent() {
-  const [eventListing, volunteerLogIn, setVolunteerUpdate] =
-    useContext(eventContext);
+  const [eventListing, volunteerLogIn, setVolunteerUpdate] = useContext(eventContext);
   const { title } = useParams();
   const [currentEvent, setCurrentEvent] = useState({});
   const [selectedTask, setSelectedTask] = useState("");
@@ -23,10 +22,12 @@ export default function SelectEvent() {
     if (selectedEvent.length > 0) {
       setCategory(selectedEvent[0].category);
       setCurrentEvent(selectedEvent[0]);
-      const signedUp = volunteerLogIn.events.filter(
-        (event) => event.id === selectedEvent[0].id
-      );
-      signedUp.length > 0 ? setJoinedEvent(true) : setJoinedEvent(false);
+      if(volunteerLogIn.events){
+        const signedUp = volunteerLogIn.events.filter(
+            (event) => event.id === selectedEvent[0].id
+          );
+          signedUp.length > 0 ? setJoinedEvent(true) : setJoinedEvent(false);
+      }
     }
   }, [eventListing, title]);
 

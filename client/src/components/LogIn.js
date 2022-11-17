@@ -17,15 +17,17 @@ function LogIn({ setVolunteerLogIn }) {
       body: JSON.stringify({ email, password }),
     }).then((res) => {
       if (res.ok) {
+        setError(false)
         res.json().then((r) => {
           sessionStorage.setItem("user_data", JSON.stringify(r));
-          const data = sessionStorage.getItem("user_data");
-          setVolunteerLogIn(data);
+          const data = sessionStorage.getItem("user_data")
+          setVolunteerLogIn(JSON.parse(data));
         });
       } else {
-        res.json().then((json) => console.log(json.errors));
+        setError(true)
+        setErrorMessage("Wrong Email or Password")
       }
-    });
+    })
   }
 
   return (

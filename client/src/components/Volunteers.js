@@ -19,7 +19,7 @@ function Volunteers() {
       .then((volunteerEvents) => {
         setVolunteerSignupEvents(volunteerEvents);
       });
-  }, [volunteerLogIn]);
+  }, [volunteerLogIn, eventListing]);
 
   function handleSignupDelete(id) {
     setVolunteerUpdate(true);
